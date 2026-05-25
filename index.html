@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A modern landing page for a driver-built store routing app." />
-  <title>Driver Route Helper</title>
+  <meta name="description" content="A modern landing page for Driver Guide, a driver-built store routing app." />
+  <title>Driver Guide</title>
   <style>
     :root {
       --bg: #070a12;
@@ -47,6 +47,11 @@
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     .noise {
       position: fixed;
       inset: 0;
@@ -86,15 +91,18 @@
     }
 
     .brand-mark {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
+      width: 46px;
+      height: 46px;
       border-radius: 14px;
-      color: white;
-      font-weight: 900;
-      background: linear-gradient(135deg, var(--accent), #b91c1c 45%, #111827);
+      object-fit: cover;
       box-shadow: 0 14px 40px rgba(255, 57, 79, 0.28);
+    }
+
+    .hero-logo {
+      width: min(220px, 56vw);
+      border-radius: 34px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42), 0 0 0 1px rgba(255, 255, 255, 0.12);
+      margin-bottom: 24px;
     }
 
     .nav-links {
@@ -207,7 +215,7 @@
 
     .stats {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 12px;
       margin-top: 34px;
       max-width: 620px;
@@ -753,15 +761,15 @@
 
   <header>
     <div class="wrap nav">
-      <a href="#top" class="brand" aria-label="Driver Route Helper home">
-        <span class="brand-mark">DR</span>
-        <span>Driver Route Helper</span>
+      <a href="#top" class="brand" aria-label="Driver Guide home">
+        <img class="brand-mark" src="assets/driver-guide-logo.png" alt="Driver Guide logo" />
+        <span>Driver Guide</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#features">Features</a>
         <a href="#routes">Routes</a>
-        <a href="privacy.html">Privacy</a>
-        <a class="button" href="mailto:hello@mcphersonlegacygroup.com">Contact</a>
+        <a href="#privacy">Privacy</a>
+        <a class="button" href="#privacy">Get updates</a>
       </nav>
     </div>
   </header>
@@ -769,6 +777,7 @@
   <main id="top">
     <section class="hero wrap">
       <div>
+        <img class="hero-logo" src="assets/driver-guide-logo.png" alt="Driver Guide app logo" />
         <div class="pill"><span class="pulse"></span> Driver-built store routing</div>
         <h1>
           Smarter store routes.
@@ -925,11 +934,11 @@
   <footer>
     <div class="wrap footer-inner">
       <div>
-        <strong style="color: white;">Driver Route Helper</strong><br />
+        <strong style="color: white;">Driver Guide</strong><br />
         <span>Created and maintained by everyday drivers.</span>
       </div>
-      <div class="socials" aria-label="Footer links">
-        <a href="mailto:hello@mcphersonlegacygroup.com" aria-label="Email">✉</a>
+      <div class="socials" aria-label="Social links">
+        <a href="mailto:you@example.com" aria-label="Email">@</a>
         <a href="privacy.html" aria-label="Privacy Policy">PP</a>
       </div>
     </div>
